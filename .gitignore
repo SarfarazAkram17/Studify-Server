@@ -1,0 +1,4 @@
+.env 
+node_modules
+.vercel
+assignment-11-firebase-admin.json
