@@ -79,5 +79,5 @@ This server handles assignment CRUD, secure Firebase-authenticated routes, submi
 
 # 🛠️ Getting Started
 
-git clone https://github.com/SarfarazAkram17/TaskWave-Server.git <br />
-cd TaskWave-Server
+git clone https://github.com/SarfarazAkram17/Studify-Server.git <br />
+cd Studify-Server
