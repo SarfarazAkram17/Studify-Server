@@ -17,7 +17,7 @@ This server handles assignment CRUD, secure Firebase-authenticated routes, submi
 
 ## 🔗 Related Links
 
-- **Client Repository:** [Studify Client](https://github.com/SarfarazAkram17/Studify-Client)
+- **Client Repository:** [https://github.com/SarfarazAkram17/Studify-Client](https://github.com/SarfarazAkram17/Studify-Client)
 - **Live Client Site:** [https://assignment-11-sarfaraz-akram.netlify.app](https://assignment-11-sarfaraz-akram.netlify.app)
 
 ---
