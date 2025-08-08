@@ -59,13 +59,12 @@ This server handles assignment CRUD, secure Firebase-authenticated routes, submi
 
 ### 🧾 Submissions
 
-| Method  | Endpoint                                              | Description                                           |
-| ------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| ------- | ----------------------------------------------------- |
-| GET     | `/submissions`                                        | Get submissions by status or examinee email (secured) |
-| GET     | `/submissions/:id`                                    | Get submission with linked assignment info            |
-| POST    | `/submissions`                                        | Submit assignment (secured, no self or duplicate)     |
-| PATCH   | `/submissions/:id`                                    | Evaluate a submission (secured, not self-review)      |
+| Method | Endpoint           | Description                                           |
+| ------ | ------------------ | ----------------------------------------------------- |
+| GET    | `/submissions`     | Get submissions by status or examinee email (secured) |
+| GET    | `/submissions/:id` | Get submission with linked assignment info            |
+| POST   | `/submissions`     | Submit assignment (secured, no self or duplicate)     |
+| PATCH  | `/submissions/:id` | Evaluate a submission (secured, not self-review)      |
 
 ---
 
