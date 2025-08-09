@@ -48,14 +48,15 @@ This server handles assignment CRUD, secure Firebase-authenticated routes, submi
 
 ### 📘 Assignments
 
-| Method | Endpoint           | Description                                         |
-| ------ | ------------------ | --------------------------------------------------- |
-| GET    | `/assignments`     | Get all assignments with optional filters           |
-| GET    | `/assignments/:id` | Get assignment details by ID                        |
-| GET    | `/myAssignments`   | Get assignments posted by a specific user (secured) |
-| POST   | `/assignments`     | Create a new assignment (secured)                   |
-| PUT    | `/assignments/:id` | Update an assignment (secured, only by owner)       |
-| DELETE | `/assignments/:id` | Delete an assignment (secured, only by owner)       |
+| Method | Endpoint              | Description                                         |
+| ------ | --------------------- | --------------------------------------------------- |
+| GET    | `/assignments`        | Get all assignments with optional filters           |
+| GET    | `/assignments/random` | Get 6 random assignments                            |
+| GET    | `/assignments/:id`    | Get assignment details by ID                        |
+| GET    | `/myAssignments`      | Get assignments posted by a specific user (secured) |
+| POST   | `/assignments`        | Create a new assignment (secured)                   |
+| PUT    | `/assignments/:id`    | Update an assignment (secured, only by owner)       |
+| DELETE | `/assignments/:id`    | Delete an assignment (secured, only by owner)       |
 
 ### 🧾 Submissions
 
