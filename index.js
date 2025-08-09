@@ -77,27 +77,37 @@ async function run() {
       .collection("submissionsCollection");
 
     // assignment
-    app.get("/assignments",
-      async (req, res) => {
-        const { difficulty, search } = req.query;
-        const query = {};
+    app.get("/assignments", async (req, res) => {
+      const { difficulty, search } = req.query;
+      const query = {};
 
-        if (difficulty) {
-          query.difficulty = difficulty;
-        }
-
-        if (search) {
-          query.title = { $regex: search, $options: "i" };
-        }
-
-        const result = await assignmentsCollection.find(query).toArray();
-        res.send(result);
+      if (difficulty) {
+        query.difficulty = difficulty;
       }
-    );
 
-    // make this to make it secure 
-    app.get("/myAssignments",verifyFirebaseToken, verifyTokenUid, async (req, res) => {
-        const query = {creator_email: req.query.email};
+      if (search) {
+        query.title = { $regex: search, $options: "i" };
+      }
+
+      const result = await assignmentsCollection.find(query).toArray();
+      res.send(result);
+    });
+
+    app.get("/assignments/random", async (req, res) => {
+      const randomAssignments = await assignmentsCollection
+        .aggregate([{ $sample: { size: 6 } }])
+        .toArray();
+
+      res.send(randomAssignments);
+    });
+
+    // make this to make it secure
+    app.get(
+      "/myAssignments",
+      verifyFirebaseToken,
+      verifyTokenUid,
+      async (req, res) => {
+        const query = { creator_email: req.query.email };
 
         const result = await assignmentsCollection.find(query).toArray();
         res.send(result);
